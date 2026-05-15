@@ -12,7 +12,10 @@ import birdwav from './asset/wav/woodthrushinmorningshawneeforestmay2.wav';
 //import trainwav from './asset/wav/train.wav'
 import './Ambiq.css'
 function Ambiq() {
-    const audioRef = useRef(null);
+    
+    const rainbgm = useRef(null);
+    const bird = useRef(null);
+    const boardbgm = useRef(null)
     
     return(
         <div>
@@ -21,27 +24,27 @@ function Ambiq() {
                         <div className="iconsaudiocontainer">
                             <div className="backgroundimage">
                                 <img src={rainsvg}/>
-                                <audio ref={audioRef} src={reinwav} className="sound"></audio>
-                                <button onClick={()=>audioRef.current.play()}>▶</button>
-                                <button onClick={()=>audioRef.current.pause()}>⏹</button>
+                                <audio ref={rainbgm} src={reinwav} className="sound"></audio>
+                                <button onClick={()=>rainbgm.current.play()}>▶</button>
+                                <button onClick={()=>rainbgm.current.pause()}>⏹</button>
                                 
                             </div>
                         </div>
                          <div className="iconsaudiocontainer">
                             <div className="backgroundimage">
                                 <img src={boat}/>
-                                <audio ref={audioRef} src={boatwav} className="sound"></audio>
-                                <button onClick={()=>audioRef.current.play()}>▶</button>
-                                <button onClick={()=>audioRef.current.pause()}>⏹</button>
+                                <audio ref={boardbgm} src={boatwav} className="sound"></audio>
+                                <button onClick={()=>boardbgm.current.play()}>▶</button>
+                                <button onClick={()=>boardbgm.current.pause()}>⏹</button>
                                 
                             </div>
                         </div>
                          <div className="iconsaudiocontainer">
                             <div className="backgroundimage">
                                 <img src={birds}/>
-                                <audio ref={audioRef} src={birdwav} className="sound"></audio>
-                                <button onClick={()=>audioRef.current.play()}>▶</button>
-                                <button onClick={()=>audioRef.current.pause()}>⏹</button>
+                                <audio ref={bird} src={birdwav} className="sound"></audio>
+                                <button onClick={()=>bird.current.play()}>▶</button>
+                                <button onClick={()=>bird.current.pause()}>⏹</button>
                                 
                             </div>
                         </div>
